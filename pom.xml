@@ -156,54 +156,7 @@
         	<!-- or applicationinsights-core for bare API -->
         	<version>[2.0,)</version>
         </dependency>
-        
-        <dependency>          
-		    <groupId>com.microsoft.azure</groupId>   
-		    <artifactId>applicationinsights-logging-log4j2</artifactId>
- 	        <version>[2.0,)</version>
-	    </dependency>
-       
-        <dependency>
-            <groupId>com.microsoft.azure</groupId> 
-            <artifactId>applicationinsights-logging-log4j1_2</artifactId>
-            <version>[2.0,)</version>
-        </dependency>
-     
-        <dependency>
-            <groupId>com.microsoft.azure</groupId>
-            <artifactId>applicationinsights-logging-logback</artifactId>
-            <version>[2.0,)</version>
-       </dependency>
     </dependencies>
-    
-    <build>
-        <!-- Set the name of the WAR, used as the context root when the app
-            is deployed -->
-        <finalName>${project.artifactId}</finalName>
-        <plugins>
-            <plugin>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>${version.war.plugin}</version>
-                <configuration>
-				<webResources>
-            				<resource>
-			                	<filtering>true</filtering>
-               				  	<includes>
-                    					<include>src/main/webapp/WEB-INF/web.xml</include>
-                		     		</includes>
-            			   	</resource>
-        		    	</webResources>
-                </configuration>
-            </plugin>
-            <!-- WildFly plug-in to deploy the WAR -->
-            <plugin>
-                <groupId>org.wildfly.plugins</groupId>
-                <artifactId>wildfly-maven-plugin</artifactId>
-                <version>${version.wildfly.maven.plugin}</version>
-			
-            </plugin>
-        </plugins>
-    </build>
 
     <profiles>
         <profile>
