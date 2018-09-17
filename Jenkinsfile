@@ -8,7 +8,7 @@ pipeline {
             {
                 echo 'hi'
                 //bat 'mvn -B -DskipTests clean package'
-                bat 'mvn clean install'
+                bat 'mvn compile war:war'
             }
         }
         /*stage('Test') {
