@@ -166,6 +166,11 @@
             <!-- By default that is to put the resulting archive into the 'deployments' folder. -->
             <!-- http://maven.apache.org/guides/mini/guide-building-for-different-environments.html -->
             <build>
+		    <resources>
+     <resource>
+       <directory>src/main/resoruces</directory>
+     </resource>
+   </resources>
                 <plugins>
                     <plugin>
                         <artifactId>maven-war-plugin</artifactId>
