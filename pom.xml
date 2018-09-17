@@ -171,16 +171,15 @@
                         <artifactId>maven-war-plugin</artifactId>
                         <version>${version.war.plugin}</version>
                         <configuration>
-							<webXml>src/main/webapp/WEB-INF/web.xml</webXml>
-							<webResources>
-								<resource>
-			                	<filtering>true</filtering>
-               				  	<includes>
-                    					<include>src/main/webapp/WEB-INF/web.xml</include>
-                		     	</includes>
-								</resource>
-							</webResources>
-						<warSourceDirectory>src/main/webapp</warSourceDirectory>
+				<webXml>src/main/webapp/WEB-INF/web.xml</webXml>
+				<webResources>
+					<resource>
+               				  <includes>
+                    				<include>src/main/webapp/WEB-INF/web.xml</include>
+                		     	  </includes>
+					</resource>
+				</webResources>
+			<warSourceDirectory>src/main</warSourceDirectory>
                         <outputDirectory>deployments</outputDirectory>
                         <warName>ROOT</warName>
                         </configuration>
